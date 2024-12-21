@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const captureButton = document.createElement('button');
             captureButton.textContent = 'Capture';
-            captureButton.classList.add('btn');
+            captureButton.classList.add('btn', 'capture-btn');
             photoPreview.appendChild(captureButton);
 
             captureButton.addEventListener('click', () => {
@@ -62,11 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
     recordVideoBtn.addEventListener('click', async () => {
         try {
             videoStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-            // const video = document.createElement('video');
-            // video.srcObject = videoStream;
-            // video.play();
-            // videoPreview.innerHTML = '';
-            // videoPreview.appendChild(video);
+            const video = document.createElement('video');
+            video.srcObject = videoStream;
+            video.play();
+            videoPreview.innerHTML = '';
+            videoPreview.appendChild(video);
             
             mediaRecorder = new MediaRecorder(videoStream);
             mediaRecorder.ondataavailable = (e) => {
