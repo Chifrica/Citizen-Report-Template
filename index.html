@@ -3,6 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Engagement and Reporting System</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="section-title">Community Issue Report</h1>
+    <form id="reportForm">
+        <div class="form-group">
+            <label for="issueType">Issue Category</label>
+            <select id="issueType" class="input-field" required>
+                <option value="">Select Issue Type</option>
+                <option value="infrastructure">Infrastructure</option>
+                <option value="environment">Environmental</option>
+                <option value="safety">Safety</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="description">Issue Description</label>
+            <textarea id="description" class="input-field" rows="4" placeholder="Describe the issue in detail..." required></textarea>
+        </div>
+        <div class="form-group camera-section">
+            <label>Photo Evidence</label>
+            <div class="camera-preview" id="photoPreview"><span>No photo captured</span></div>
+            <div class="btn-group">
+                <button type="button" class="btn" id="capturePhotoBtn"><i class="fas fa-camera"></i> Capture Photo</button>
+                <button type="button" class="btn btn-secondary" id="uploadPhotoBtn"><i class="fas fa-upload"></i> Upload Photo</button>
+            </div>
+        </div>
+        <div class="form-group camera-section">
+            <label>Verification Video</label>
+            <div class="camera-preview" id="videoPreview"><span>No video recorded</span></div>
+            <div class="btn-group">
+                <button type="button" class="btn" id="recordVideoBtn"><i class="fas fa-video"></i> Record Video</button>
+                <button type="button" class="btn btn-secondary" id="stopVideoBtn" disabled><i class="fas fa-stop"></i> Stop Recording</button>
+            </div>
+        </div>
+        <div class="btn-group">
+            <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Submit Report</button>
+        </div>
+    </form>
+  </div>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citizens Engagement and Reporting System</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -69,4 +123,4 @@
 
   <script src="script.js"></script>
 </body>
-</html>
+</html> -->
