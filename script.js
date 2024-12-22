@@ -35,12 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
             video.play();
             photoPreview.innerHTML = '';
             photoPreview.appendChild(video);
-
+            
             const captureButton = document.createElement('button');
             captureButton.textContent = 'Capture';
             captureButton.classList.add('btn', 'capture-btn');
             photoPreview.appendChild(captureButton);
 
+             // Creation of captureButton listener
             captureButton.addEventListener('click', () => {
                 const canvas = document.createElement('canvas');
                 canvas.width = video.videoWidth;
